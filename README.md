@@ -51,7 +51,7 @@ import CollectionViewFlowLayoutWrapper
 
 Define data and cell to pass in your `UICollectionView`.
 
-> ``📝`` Data for cell must conform to `Identifieble` protocol. Cell can be any custom struct that is conformed to `View` protocol.
+> ``NOTE:`` Data for cell must conform to `Identifieble` protocol. Cell can be any custom struct that is conformed to `View` protocol.
 
 #### Step 4
 
