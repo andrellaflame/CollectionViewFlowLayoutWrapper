@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "CollectionViewFlowLayoutWrapper"
-  spec.version      = "2.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "CollectionView FlowLayout wrapper for SwiftUI."
 
   # This description is used to generate tags and improve search results.
