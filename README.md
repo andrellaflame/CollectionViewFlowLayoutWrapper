@@ -12,6 +12,7 @@ A convenient and customizable wrapper for using `UICollectionView` with `SwiftUI
 - 🔄 Supports dynamic data binding for efficient updates.
 - 🚀 High-performance scrolling with `UICollectionViewFlowLayout`.
 - 📱 Compatible with all iOS devices running iOS 13.0 and above.
+- 📦 Includes some pre-defined CollectionViews for defined flow layout.
 
 ## Installation
 
@@ -31,4 +32,78 @@ dependencies: [
 Install pod for `CollectionViewFlowLayoutWrapper`
 ```
 pod install 'CollectionViewFlowLayoutWrapper'
+```
+
+## Usage
+
+#### Step 1
+
+Framework installation. To view installation steps look into `Installation` part.
+
+#### Step 2
+
+Import `CollectionViewFlowLayoutWrapper` into your file.
+```
+import CollectionViewFlowLayoutWrapper
+```
+
+#### Step 3
+
+Define data and cell to pass in your `UICollectionView`.
+
+##### Note
+
+Data for cell must conform to `Identifieble` protocol.
+Cell can be any custom struct that is conformed to `View` protocol.
+
+#### Step 4
+
+Call `CollectionView` initializer with a set of properties using default or convenience init. 
+
+##### Example 1
+
+Example of pre-defined `CollectionView` usage. This `CollectionView` defines SwiftUI view representing a `CollectionView` with `CardsLayout` customizable and content.
+
+```
+CardsCollectionView(
+    items: $items,
+    itemHeight: 500,
+    itemWidth: 260,
+    scrollDirection: .horizontal,
+    contentForData: { data in
+    CollectionViewCustomCell(data: data)
+    }
+)
+```
+
+##### Example 2
+
+Example of pre-defined `CollectionView` usage. This `CollectionView` defines SwiftUI view representing a collection with a fade-in effect of scrolling.
+
+```
+FadeInCollectionView(
+    items: $items,
+    itemHeight: 100,
+    itemWidth: 100,
+    scrollDirection: .vertical,
+    sideItemScale: 0.6,
+    sideItemAlpha: -1.5,
+    contentForData: { data in
+    CollectionViewCustomCell(data: data)
+    }
+)
+```
+
+##### Example 3
+
+Example of default `CollectionView` usage. This `CollectionView` uses convenience init.
+
+```
+CollectionView(
+    collection: self.items,
+    contentSize: .fixed(CGSize(width: 100, height: 100)),
+    contentForData: { data in
+    CollectionViewCustomCell(data: data)
+    }
+)
 ```
