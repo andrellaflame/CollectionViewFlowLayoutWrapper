@@ -37,7 +37,8 @@ A convenient and customizable wrapper for using UICollectionView with SwiftUI th
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT"
+  # spec.license      = "MIT"
+  spec.license      = { :type => "MIT", :file => "LICENSE.txt" }
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
