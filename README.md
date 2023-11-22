@@ -51,10 +51,7 @@ import CollectionViewFlowLayoutWrapper
 
 Define data and cell to pass in your `UICollectionView`.
 
-##### Note
-
-Data for cell must conform to `Identifieble` protocol.
-Cell can be any custom struct that is conformed to `View` protocol.
+> ``📝`` Data for cell must conform to `Identifieble` protocol. Cell can be any custom struct that is conformed to `View` protocol.
 
 #### Step 4
 
@@ -62,7 +59,7 @@ Call `CollectionView` initializer with a set of properties using default or conv
 
 ##### Example 1
 
-Example of pre-defined `CollectionView` usage. This `CollectionView` defines SwiftUI view representing a `CollectionView` with `CardsLayout` customizable and content.
+> 📝 Example of pre-defined `CollectionView` usage. This `CollectionView` defines SwiftUI view representing a `CollectionView` with `CardsLayout` customizable and content.
 
 ```
 CardsCollectionView(
@@ -78,7 +75,7 @@ CardsCollectionView(
 
 ##### Example 2
 
-Example of pre-defined `CollectionView` usage. This `CollectionView` defines SwiftUI view representing a collection with a fade-in effect of scrolling.
+> 📝 Example of pre-defined `CollectionView` usage. This `CollectionView` defines SwiftUI view representing a collection with a fade-in effect of scrolling.
 
 ```
 FadeInCollectionView(
@@ -96,7 +93,7 @@ FadeInCollectionView(
 
 ##### Example 3
 
-Example of default `CollectionView` usage. This `CollectionView` uses convenience init.
+> 📝 Example of default `CollectionView` usage. This `CollectionView` uses convenience init.
 
 ```
 CollectionView(
