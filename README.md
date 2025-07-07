@@ -36,30 +36,34 @@ pod install 'CollectionViewFlowLayoutWrapper'
 
 ## Usage
 
-#### Step 1
+#### Step 1: Framework installation
 
-Framework installation. To view installation steps look into `Installation` part.
+Install the framework. 
 
-#### Step 2
+For detailed instructions, refer to the [Installation](#installation) section.
 
-Import `CollectionViewFlowLayoutWrapper` into your file.
+#### Step 2: Import the Module
+
+Add the following import to any Swift file where you want to use the collection view: 
+
 ```
 import CollectionViewFlowLayoutWrapper
 ```
 
-#### Step 3
+#### Step 3: Prepare Your Data and Cell View
 
-Define data and cell to pass in your `UICollectionView`.
+Define your data model and the corresponding SwiftUI view (cell):
 
-> ``NOTE:`` Data for cell must conform to `Identifieble` protocol. Cell can be any custom struct that is conformed to `View` protocol.
+> ``NOTE:`` Your data type must conform to the `Identifiable` protocol, while your cell must be a SwiftUI View.
 
-#### Step 4
+#### Step 4: Initialize a CollectionView
 
-Call `CollectionView` initializer with a set of properties using default or convenience init. 
+You can use the built-in `CollectionView` or choose from several pre-configured layouts.
 
-##### Example 1
+##### Example 1: CardsCollectionView
 
-> 📝 Example of pre-defined `CollectionView` usage. This `CollectionView` defines SwiftUI view representing a `CollectionView` with `CardsLayout` customizable and content.
+> 📝 A horizontally scrollable card-style layout. 
+> This `CollectionView` defines SwiftUI view representing a `CollectionView` with `CardsLayout` customizable and content.
 
 ```
 CardsCollectionView(
@@ -73,9 +77,10 @@ CardsCollectionView(
 )
 ```
 
-##### Example 2
+##### Example 2: FadeInCollectionView
 
-> 📝 Example of pre-defined `CollectionView` usage. This `CollectionView` defines SwiftUI view representing a collection with a fade-in effect of scrolling.
+> 📝 A vertical layout with a fade-in effect for side items.
+> This `CollectionView` defines SwiftUI view representing a collection with a fade-in effect of scrolling.
 
 ```
 FadeInCollectionView(
@@ -91,9 +96,10 @@ FadeInCollectionView(
 )
 ```
 
-##### Example 3
+##### Example 3: Generic CollectionView
 
-> 📝 Example of default `CollectionView` usage. This `CollectionView` uses convenience init.
+> 📝 A default layout using a fixed item size and a custom cell.
+> This `CollectionView` uses convenience init.
 
 ```
 CollectionView(
